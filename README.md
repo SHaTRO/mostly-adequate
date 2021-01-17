@@ -25,10 +25,21 @@ Note that the *commutative* property is not *associative*.
 
 ### Chapter 02 - First Class Functions
 
-The chapter gives examples of minimal code for declaring functions.  Note that Typescript is a little more verbose (but safer).
+This chapter gives examples of minimal code for declaring functions.  Note that Typescript is a little more verbose (but safer).
 
 In the review examples for Chapter 01 examples, we showed generics.
 The set of review examples in
  [`src/chapter02/greetings.test.ts`](https://github.com/SHaTRO/mostly-adequate/tree/main/src/chapter02/greetings.test.ts)
  demonstrate simple usage as well as higher order (similar to the `httpGet` example in the book).
 They also introduce currying, though that is not yet introduced in the book.
+
+### Chapter 03 - Purity and Memoization
+
+This chapter discusses the nature of and reasoning for pure functions.
+While overly derisive of other forms of programming, it does elucidate the benefits of functional programming.
+
+In the review, rather than implementing `memoize()` we import an implementation from the NPM module `fast-memoize`.
+This allows demonstration of referential transparency.
+
+In order to handle BigInt serialization and avoid exceptions, we modify the BigInt.prototype to support toJSON() as string.
+Note that this modification does NOT support deserializing strings back to BigInt - that would have to be done by codec, transformer, or manually.
