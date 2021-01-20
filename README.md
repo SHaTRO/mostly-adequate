@@ -46,8 +46,18 @@ Note that this modification does NOT support deserializing strings back to BigIn
 
 ### Chapter 04 - Currying
 
-This chapter explores the idea of currying and partial application of functions, with concrete examples.
+This chapter explores the idea of currying and partial application of functions, with concrete examples.  
+
+Also note the introduction of the term *variadic* with regards to functions.
+A *variadic* function is a function of *indefinite* arity, essentially with a variable number of arguments.
 
 Because this review is in Typescript, the `curry()` function from the essential library will not be used.
 In lieu of `curry()`, declare curried functions verbosely and fully apply them as `fn(x)(y)` rather than `fn(x, y)`.
 
+### Chapter 05 - Composition
+
+This chapter explores functional composition.
+The examples in the chapter refer to an essential function, `compose()`, which is a right-to-left composition function that takes functions as arguments.
+
+In the review, the `compose()` function is replaced with `flow()` function from **fp-ts** which is a left-to-right composition function (thankfully).
+It is necessary to also use the `pipe()` function from **fp-ts** to avoid type conflicts when composing with `flow()` in some cases.
