@@ -61,3 +61,32 @@ The examples in the chapter refer to an essential function, `compose()`, which i
 
 In the review, the `compose()` function is replaced with `flow()` function from **fp-ts** which is a left-to-right composition function (thankfully).
 It is necessary to also use the `pipe()` function from **fp-ts** to avoid type conflicts when composing with `flow()` in some cases.
+
+### Chapter 06 - Principled Refactor
+
+This chapter demonstrates an example application, including concepts of declarative coding and principle refactoring.
+
+Browserify is used to support a one page browser app for this chapter.
+The code for this chapter is located in *browser/chapter06* instead of *src/chapter06*.
+The html, which should be opened directly in a browser and references the build app file, is locaed in *browser/chapter06/html*.
+
+To run the browser application:
+1) Compile the application code using one of: 
+    * `npm run build:chapter06` - post-refactor version most likely
+    * `npm run build:chapter06:pre-refactor` - the pre-refactor version
+    * `npm run build:chapter06:post-refactor` - the post-refactor version
+2) Open the file located at *browser/chapter06/html/index.html* in the browser.
+
+The example code in the chapter is written as a single file in Javascript.
+Here are some of the changes made to build the app in Typescript:
+* As usual, **fp-ts** is used insted of **ramda**.
+* **Browserify** is used to build the app as a single file.
+* A new *tsconfig-browser.json* file is used for this build, and a build command is added to *package.json*.
+* **fetch** is used instead of the JQuery XHR functions, leveraging Webworker functionality.
+* URL fetching utilities are moved to their own file, *lib/fetchJson.ts* to unclutter the application code.
+* The shared **Impure** methods are moved to *lib/impure.ts* for shared use by the app versions.
+* Instead of the `prop` function, **Lens** optics from **monacle-ts** is used.
+* All of the "functions" used to build the app itself are moved to *functions/* in their respective files.
+* We did jump ahead a little and add `Either<E,A>` when doing the fetch to handle errors.
+
+Both the pre-refactor and post-refactor apps are essentially identical, but are importing different versions of `url` and `render`.
