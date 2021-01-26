@@ -89,4 +89,18 @@ Here are some of the changes made to build the app in Typescript:
 * All of the "functions" used to build the app itself are moved to *functions/* in their respective files.
 * We did jump ahead a little and add `Either<E,A>` when doing the fetch to handle errors.
 
-Both the pre-refactor and post-refactor apps are essentially identical, but are importing different versions of `url` and `render`.
+Both the pre-refactor and post-refactor apps are essentially identical, but are importing different:% versions of `url` and `render`.
+
+### Chapter 07 - Hindley-Milner & Assoc.
+
+This chapter explores Hindley-Milner type signatures and free theorems. 
+It also makes a passing mention of type constraints. 
+The primary thrust of the chapter is that reasoning about functions via type signature and naming can be better than "RTFMing".
+The argument is compelling if not wholly demonstrated.
+
+For the review, the Hindly-Milner type signatures are represented alongside typescript functional declarations.
+This demonstrates the power of Typescript to enforce strong typing while retaining the flexibility of the functional programming.
+
+Note that no examples of "constraints" are presented.
+Javascript, lacking type signatures, does not support an example of this directly.
+This is a future topic to explore.
