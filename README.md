@@ -104,3 +104,11 @@ This demonstrates the power of Typescript to enforce strong typing while retaini
 Note that no examples of "constraints" are presented.
 Javascript, lacking type signatures, does not support an example of this directly.
 This is a future topic to explore.
+
+### Chapter 08 - Tupperware
+
+This chapter explores containers, Functors, error handling, and asynchronous tasks.
+
+For the review, we vary somewhat from items presented in order to explore their equivalents in fp-ts.
+Some of the constructs used are not the most elegant but they are effective.
+Because "error handling" is covered in this chapter, we do draft many of our exercises such that we defer error state until the end.
