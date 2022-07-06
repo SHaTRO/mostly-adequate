@@ -1,4 +1,4 @@
-import { Lens } from "monocle-ts";
+import { Lens } from 'monocle-ts';
 
 /* Types added so we cna use Lens instead of 'prop' */
 export type MediaUrl = {

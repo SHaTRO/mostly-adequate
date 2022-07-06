@@ -1,5 +1,5 @@
 
-import { add, filter, map, match, replace } from './currying';
+import { add, filter, match, replace } from './currying';
 
 describe('currying', () => {
 

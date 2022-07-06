@@ -12,8 +12,9 @@ export const url = (t: string) => new URL(`https://${host}${path}${query(t)}`);
 
 const img = (src: string) => $('<img />', { src });
 const imgElement = flow(Impure.trace('img url'), img);
-const mediaUrls = flow(mediaItemsProp.get, Impure.trace('mediaUrls'), map(mediaUrlProp.get))
+const mediaUrls = flow(mediaItemsProp.get, Impure.trace('mediaUrls'), map(mediaUrlProp.get));
 const images = flow(mediaUrls, Impure.trace('urls'), map(imgElement));
 export const render = flow(Impure.trace('render'), images, Impure.setHtml('#js-main'));
 
-// Note: the dependency upon jquery could be moved to Impure entirely by moving the 'img'/'imgElement' stuff there and just providing src urls to Impure.setHtml()
+// Note: the dependency upon jquery could be moved to Impure entirely by moving the 
+// 'img'/'imgElement' stuff there and just providing src urls to Impure.setHtml()

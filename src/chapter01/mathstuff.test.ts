@@ -1,5 +1,3 @@
-import { map } from 'fp-ts';
-import { option } from 'io-ts-types';
 import { add, multiply } from './mathstuff';
 
 describe('mathstuff', () => {

@@ -30,7 +30,7 @@ describe('tupperware', () => {
     expect( Container.of(3).map( a => a+4 ).$value ).toBe(7); 
     expect( Container.of('peanut butter').map( a => `${a} and jelly` ).$value ).toBe('peanut butter and jelly');
     expect( Container.of('He\'s').map<string>( (s) => s + ' gone' ).map<number>( (s: string) => s.length ).$value ).toBe(9);
-  })
+  });
 
   it('maybe so / maybe not', () => {
     const maybeSo = Maybe.of('John Malkovich').map(match(/a/ig));
@@ -208,14 +208,14 @@ describe('tupperware', () => {
     });
 
     it('reading file as a task with TaskEither', async () => {
-      const readFile = (filename: string): TE.TaskEither<String, Buffer> => TE.tryCatch(() => readFilePromise(filename), String);
+      const readFile = (filename: string): TE.TaskEither<string, Buffer> => TE.tryCatch(() => readFilePromise(filename), String);
       const linesAsStrings = flow(
         readFile,
         TE.map(bufferToString),
         TE.map(splitRE(/\r?\n/)),
         TE.map(A.head),
       );
-      expect(await pipe('fixtures/testdata.txt', linesAsStrings)()).toEqual(E.right(O.some('This is some test data.')));
+      expect(await linesAsStrings('./fixtures/testdata.txt')()).toEqual(E.right(O.some('This is some test data.')));
     });
   });
 

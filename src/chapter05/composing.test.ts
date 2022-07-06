@@ -2,7 +2,6 @@
 import { flow, pipe } from 'fp-ts/function';
 import { exclaim, toLowerCase, toUpperCase, head, headS, replace, reverse, intercalate, map, split } from './composing';
 
-
 describe('composition', () => {
   // note: flow() is left-to-right instead of right-to-left, so we reverse function order from compose()
   const shout = flow(toUpperCase, exclaim);
@@ -13,7 +12,7 @@ describe('composition', () => {
   const last = flow(reverse, head);
   it('slow last', () => {
     expect(last(['a', 'b', 'c'])).toBe('c');
-  })
+  });
 
   const lastUpper = <A extends string>(x: A[]) => pipe(x, flow(reverse, head, toUpperCase));
   const loadLastUpperAssociative = <A extends string>(x: A[]) => pipe(x, flow(lastUpper, exclaim));

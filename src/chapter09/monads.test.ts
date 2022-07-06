@@ -5,7 +5,7 @@ import * as IO from 'fp-ts/IO';
 import * as O from 'fp-ts/Option';
 import * as T from 'fp-ts/Task';
 import { head } from '../chapter07/stringutil';
-import { match, Container, Maybe } from '../chapter08/tupperware';
+import { Maybe } from '../chapter08/tupperware';
 
 describe('Pointy Functor Factories', () => {
 
@@ -56,7 +56,7 @@ describe('Pointy Functor Factories', () => {
       const ttt = T.of(T.of(T.of('sewers')));
       const tt = T.flatten(ttt);
       expect( await (await tt())() ).toEqual('sewers');
-    })
+    });
 
   });
 

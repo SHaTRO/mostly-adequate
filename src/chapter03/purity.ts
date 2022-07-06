@@ -1,6 +1,6 @@
 
 export const powerGreedy = (exp: number) => (x: bigint) => {
-  let v: bigint = BigInt(1);
+  let v = BigInt(1);
   for (let curExp = 1; curExp <= exp; curExp++) {
     v = x * v;
   }
