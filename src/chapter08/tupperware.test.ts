@@ -177,7 +177,7 @@ describe('tupperware', () => {
     });
 
     it('search term parser', () => {
-      const url: IO.IO<string> = IO.fromIO(randomUrl);  // simulate IO with an impure function
+      const url: IO.IO<string> = randomUrl;  // simulate IO with an impure function
       const toPairs = flow(split('&'), A.map(split('=')));
       const params = flow(split('?'), A.last, O.map(toPairs));
       const findParamF = (key: string) => flow(params, O.chain(A.findFirst(keyEquals(key))));

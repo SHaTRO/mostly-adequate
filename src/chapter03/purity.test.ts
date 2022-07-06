@@ -32,7 +32,6 @@ describe('purity - power5', () => {
   it('greedy power of 100, memoized 1000x', () => {
     const power100memoized = memoize(power100);
     testLoop(power100memoized, 1000);
-    const end = Date.now();
   });
 
 });

@@ -27,7 +27,6 @@ describe('getting ahead of ourselves', () => {
   });
 
   it('currying first order', () => {
-    // const greet = (name: string, f: (n: string) => string) => f(name);
     const greet = (name: string) => (f: (n: string) => string) => f(name);
     expect(greet('Jill')(hi)).toEqual('Hi, Jill');
     expect(greet('Jill')(hello)).toEqual('Hello, Jill');
