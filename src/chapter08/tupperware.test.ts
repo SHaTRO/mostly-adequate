@@ -3,7 +3,7 @@ import { match, Container, Maybe } from './tupperware';
 import * as util from 'util';
 import { Lens } from 'monocle-ts';
 
-import { split, join } from 'fp-ts-string';
+import { split } from 'fp-ts-string';
 import { pipe, flow, identity } from 'fp-ts/lib/function';
 import * as E from 'fp-ts/lib/Either';
 import * as O from 'fp-ts/lib/Option';
