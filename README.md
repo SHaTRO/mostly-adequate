@@ -112,3 +112,12 @@ This chapter explores containers, Functors, error handling, and asynchronous tas
 For the review, we vary somewhat from items presented in order to explore their equivalents in fp-ts.
 Some of the constructs used are not the most elegant but they are effective.
 Because "error handling" is covered in this chapter, we do draft many of our exercises such that we defer error state until the end.
+
+### Chapter 09 - Monadic Onions
+
+This chapter explores the associativity of functions on Monads, specifically map and join.
+
+For the review we do a little bit with Maybe, but we use Lens (monocle-ts) instead of "safeProp" and derive our own properties functions.
+We also use O.Option instead of Maybe, and update from using `join` to using `flatten` as per *fp-ts* and maintaining the monadic nature.
+
+Excercises are left as exactly that.
