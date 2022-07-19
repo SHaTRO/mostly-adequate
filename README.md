@@ -126,5 +126,5 @@ Exercises are left as exactly that.
 
 Applicative and applying Functors is explored here. 
 
-For the review some of the "type free" discussion has no examples because forcing TypeScript to ignore types is rather futile.  
+For the review some of the "type free" discussion has no examples because forcing TypeScript to ignore types is rather futile.
 Type oriented examples are presented to explore the concepts of this chapter - essentially the introduction of `ap()`.
