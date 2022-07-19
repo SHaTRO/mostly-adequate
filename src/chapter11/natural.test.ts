@@ -1,5 +1,5 @@
 import { pipe } from 'fp-ts/function';
-import * as RNA from 'fp-ts/ReadOnlyNonEmptyArray';
+import * as RNA from 'fp-ts/ReadonlyNonEmptyArray';
 import * as T from 'fp-ts/Task';
 import * as IO from 'fp-ts/IO';
 import * as O from 'fp-ts/Option';
