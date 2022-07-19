@@ -126,5 +126,11 @@ Exercises are left as exactly that.
 
 Applicative and applying Functors is explored here. 
 
-For the review some of the "type free" discussion has no examples because forcing TypeScript to ignore types is rather futile.  
+For the review some of the "type free" discussion has no examples because forcing TypeScript to ignore types is rather futile.
 Type oriented examples are presented to explore the concepts of this chapter - essentially the introduction of `ap()`.
+
+### Chapter 11 - Natural Transformations
+
+Because of the nature of transformations, the stronger typing is once again an asset. 
+The natural transformations here demonstrate how we can compose clean functional pipes and flows.
+There is no demonstration of isomorphism, as it should be considered a trivial exercise.
