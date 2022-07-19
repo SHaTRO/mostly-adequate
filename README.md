@@ -120,4 +120,11 @@ This chapter explores the associativity of functions on Monads, specifically map
 For the review we do a little bit with Maybe, but we use Lens (monocle-ts) instead of "safeProp" and derive our own properties functions.
 We also use O.Option instead of Maybe, and update from using `join` to using `flatten` as per *fp-ts* and maintaining the monadic nature.
 
-Excercises are left as exactly that.
+Exercises are left as exactly that.
+
+### Chapter 10 - Applicative Functors
+
+Applicative and applying Functors is explored here. 
+
+For the review some of the "type free" discussion has no examples because forcing TypeScript to ignore types is rather futile.  
+Type oriented examples are presented to explore the concepts of this chapter - essentially the introduction of `ap()`.
